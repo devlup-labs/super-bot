@@ -29,3 +29,4 @@ async def clear(ctx, amount=2):
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client.run(TOKEN)
+                   
