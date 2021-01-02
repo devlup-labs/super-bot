@@ -8,6 +8,9 @@ discord = "*"
 requests = "*"
 twit = "*"
 python-dotenv = "*"
+twython = "*"
+twitter-ads = "*"
+tweepy = "*"
 
 [dev-packages]
 
