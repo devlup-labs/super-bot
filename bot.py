@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = "\")
+client = commands.Bot(command_prefix = "\\")
 
 @client.event
 async def on_ready():
@@ -29,4 +29,3 @@ async def clear(ctx, amount=2):
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client.run(TOKEN)
-                   
