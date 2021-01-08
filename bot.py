@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from discord.ext import commands
 
-client = commands.Bot(command_prefix = ",")
+client = commands.Bot(command_prefix = "\\")
 
 @client.event
 async def on_ready():
@@ -21,7 +21,11 @@ async def dob(ctx):
 async def ping(ctx):
     await ctx.send(f'`My latency is {round(client.latency*1000)} ms`')
 
-
+@client.command(aliases=['c'])
+@commands.has_permissions(manage_messages = True)
+async def clear(ctx, amount=2):
+    await ctx.channel.purge(limit=amount)
+  
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client.run(TOKEN)
